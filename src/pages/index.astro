@@ -20,7 +20,11 @@ import { Icon } from "astro-icon/components";
         </button>
 
         <!-- Side Menu -->
-        <div id="sidebar" class="fixed inset-0 z-40 flex h-svh w-full flex-col justify-center gap-8 bg-black/90 p-8 backdrop-blur-[2px]">
+        <div
+            id="sidebar"
+            class="fixed inset-0 z-40 flex h-svh w-full flex-col justify-center gap-8 bg-black/90 p-8 backdrop-blur-[2px]"
+            style="visibility: hidden"
+        >
             <p class="rounded-sm absolute top-6 left-8 font-extrabold text-2xl">ARCANE</p>
             <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
                 <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
@@ -487,6 +491,7 @@ import { Icon } from "astro-icon/components";
                 },
             });
 
+            gsap.set("#sidebar", { visibility: "visible" });
             const sidebarTl = gsap
                 .timeline({ paused: true })
                 .from("#sidebar", {
@@ -597,5 +602,3 @@ import { Icon } from "astro-icon/components";
         });
     </script>
 </html>
-});
-
