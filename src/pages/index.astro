@@ -71,7 +71,7 @@ import { Icon } from "astro-icon/components";
             <section id="hero" class="h-screen relative overflow-hidden">
                 <div class="absolute lg:hidden inset-0 bg-linear-to-r from-white/50 via-white/30 to-transparent"></div>
                 <div class="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-black/70 to-transparent"></div>
-                <div id="hero-img" class="absolute inset-0 bg-[url('/arcane0.jpg')] -z-10 bg-cover bg-position-[70%_center] bg-no-repeat">
+                <div id="hero-img" class="absolute inset-0 bg-[url('/arcane0.webp')] -z-10 bg-cover bg-position-[70%_center] bg-no-repeat">
                 </div>
                 <header class="grid grid-cols-3 items-center w-full px-2 sm:px-8 py-4">
                     <a href="#" id="logo" class="rounded-sm font-extrabold text-2xl w-[4ch] tracking-tight leading-5">RIOT GAMES</a>
@@ -111,7 +111,7 @@ import { Icon } from "astro-icon/components";
                         </ul>
                     </nav>
                 </header>
-                <div class="text-4xl text-center lg:text-6xl top-100 left-0 lg:top-60 lg:left-5 text-black font-extrabold absolute">
+                <div class="text-4xl text-center lg:text-6xl top-40 left-0 lg:top-60 lg:left-5 text-black font-extrabold absolute">
                     <p class="title">ARCANE</p>
                     <p class="title">SEASON</p>
                     <p class="title">2</p>
@@ -150,7 +150,7 @@ import { Icon } from "astro-icon/components";
                 <div class="start-banner overflow-hidden z-9 text-4xl absolute bg-emerald-900 bottom-0 h-screen w-screen"></div>
             </section>
             <section id="second-section" class="relative h-screen overflow-hidden grid place-items-center">
-                <div id="second-section-bg" class="absolute inset-0 bg-[url('/bg2.png')] bg-cover bg-position-[30%_center] -z-10"></div>
+                <div id="second-section-bg" class="absolute inset-0 bg-[url('/bg2.webp')] bg-cover bg-position-[30%_center] -z-10"></div>
 
                 <div class="w-[80vw] h-[90svh] lg:h-[70vh] relative rounded-md">
                     <div id="cards-wrapper" class="h-full w-full *:absolute *:inset-0">
@@ -287,14 +287,14 @@ import { Icon } from "astro-icon/components";
             </section>
             <section
                 id="outro-sec"
-                class="relative grid place-items-center py-16 px-4 min-h-screen bg-[url('/bg-6.png')] bg-no-repeat bg-cover"
+                class="relative grid place-items-center py-16 px-4 min-h-screen bg-[url('/bg-6.webp')] bg-no-repeat bg-cover"
             >
                 <div class="flex gap-12 items-center flex-col lg:flex-row">
                     <div class="relative order-2 lg:order-1">
                         <div class="absolute inset-0 rounded-full border border-[#808bb0] scale-105"></div>
 
                         <div class="relative max-w-150 max-h-150 rounded-full overflow-hidden">
-                            <img id="game-img-holder" src="/league-of-legends.jpg" class="w-full h-full object-cover" />
+                            <img id="game-img-holder" src="/league-of-legends.webp" class="w-full h-full object-cover" />
                         </div>
                     </div>
                     <div class="flex flex-col items-center gap-4 sm:gap-12 order-1 lg:order-2">
@@ -466,7 +466,7 @@ import { Icon } from "astro-icon/components";
                     stagger: 0.1,
                     ease: "power1.out",
                 });
-            // tl.seek("stop").play();
+            tl.seek("stop").play();
             // GSDevTools.create({ animation: tl });
 
             gsap.from("#second-section-bg", {
@@ -573,19 +573,19 @@ import { Icon } from "astro-icon/components";
         const valorantBtn = document.getElementById("valorant-btn");
         const lorBtn = document.getElementById("lor-btn");
         lolBtn?.addEventListener("click", () => {
-            imageHolder.src = "/league-of-legends.jpg";
+            imageHolder.src = "/league-of-legends.webp";
             valorantBtn?.classList.remove("active-game-btn");
             lorBtn?.classList.remove("active-game-btn");
             lolBtn?.classList.add("active-game-btn");
         });
         valorantBtn?.addEventListener("click", () => {
-            imageHolder.src = "/valorant.jpg";
+            imageHolder.src = "/valorant.webp";
             lolBtn?.classList.remove("active-game-btn");
             lorBtn?.classList.remove("active-game-btn");
             valorantBtn?.classList.add("active-game-btn");
         });
         lorBtn?.addEventListener("click", () => {
-            imageHolder.src = "/legends-of-runeterra.jpg";
+            imageHolder.src = "/legends-of-runeterra.webp";
             valorantBtn?.classList.remove("active-game-btn");
             lolBtn?.classList.remove("active-game-btn");
             lorBtn?.classList.add("active-game-btn");
